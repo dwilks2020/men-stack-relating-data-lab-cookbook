@@ -1,0 +1,12 @@
+//views/foods/edit.ejs
+
+<h1>Edit Food Item</h1>
+<form action="/users/<%= user._id %>/foods/<%= foodItem._id %>?_method=PUT" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" value="<%= foodItem.name %>" required>
+    
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" name="quantity" value="<%= foodItem.quantity %>" required>
+    
+    <button type="submit">Update Food Item</button>
+</form>
